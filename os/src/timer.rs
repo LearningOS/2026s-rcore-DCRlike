@@ -28,7 +28,6 @@ pub fn get_time_ms() -> usize {
 pub fn get_time_us() -> usize {
     time::read() * MICRO_PER_SEC / CLOCK_FREQ
 }
-
 /// Set the next timer interrupt
 pub fn set_next_trigger() {
     set_timer(get_time() + CLOCK_FREQ / TICKS_PER_SEC);
